@@ -67,19 +67,9 @@ export default function ProductCard({ product }) {
         </div>
 
         <div className="inventory">
-          <button
-            className="inv-btn"
-            onClick={decreaseInventory}
-            disabled={product.quantity <= 0}
-          >
-            −
-          </button>
+
 
           <div style={{ fontSize: 13 }}>{product.quantity}</div>
-
-          <button className="inv-btn" onClick={increaseInventory}>
-            +
-          </button>
 
           {product.quantity < 5 && <div className="low-stock">Low Stock</div>}
         </div>
